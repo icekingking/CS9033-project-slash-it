@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BE970D06-BD26-457E-9374-D76AD510C615</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Polygon</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D3550B0D-76D4-4978-8906-57CD2BEE803C</key>
+		<string>https://github.com/icekingking/CS9033-project-slash-it.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Polygon/Polygon.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D3550B0D-76D4-4978-8906-57CD2BEE803C</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/icekingking/CS9033-project-slash-it.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D3550B0D-76D4-4978-8906-57CD2BEE803C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D3550B0D-76D4-4978-8906-57CD2BEE803C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CS9033-project-slash-it</string>
+		</dict>
+	</array>
+</dict>
+</plist>
