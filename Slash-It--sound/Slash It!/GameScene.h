@@ -7,8 +7,11 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "Global_variable.h"
 
-@interface GameScene : SKScene <SKPhysicsContactDelegate>
+@interface GameScene : SKScene <SKPhysicsContactDelegate>{
+    Global_variable * temp;
+}
 @property int touchFlag;
 @property int numberOfObjects;
 @property NSString *environmentName;

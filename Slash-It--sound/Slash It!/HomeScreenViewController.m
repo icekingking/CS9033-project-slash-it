@@ -10,6 +10,7 @@
 #import "EnvironmentScreenViewController.h"
 #import "SettingScreenViewController.h"
 #import "GameCenterScreenViewController.h"
+#import "Audio.h"
 
 @interface HomeScreenViewController ()
 
@@ -65,6 +66,7 @@
     UIImageView *backgroundImageView=[[UIImageView alloc]initWithFrame:self.view.frame];
     [self.view insertSubview:backgroundImageView atIndex:0];
     backgroundImageView.image=backgroundImage;
+    
     
 	// Do any additional setup after loading the view.
 }

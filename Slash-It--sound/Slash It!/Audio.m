@@ -11,6 +11,7 @@
 
 @interface Audio()
 @property (nonatomic) AVAudioPlayer * backgroundMusicPlayer;
+@property (nonatomic) AVAudioPlayer * mainbackgroundPlayer;
 @property (nonatomic) AVAudioPlayer * soundEffectPlayer;
 @end
 
@@ -36,6 +37,21 @@
 {
     [self.backgroundMusicPlayer pause];
 }
+
+- (void)playMainBackgroundMusic:(NSString *)filename {
+    NSError *error;
+    NSURL * backgroundMusicURL = [[NSBundle mainBundle] URLForResource:filename withExtension:nil];
+    self.mainbackgroundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:&error];
+    self.mainbackgroundPlayer.numberOfLoops = -1;
+    [self.mainbackgroundPlayer prepareToPlay];
+    [self.mainbackgroundPlayer play];
+}
+
+- (void)pauseMainBackgroundMusic
+{
+    [self.mainbackgroundPlayer pause];
+}
+
 
 - (void)playSoundEffect:(NSString*)filename {
     NSError *error;

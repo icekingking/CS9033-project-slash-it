@@ -8,6 +8,7 @@
 
 #import "SettingScreenViewController.h"
 #import "HomeScreenViewController.h"
+#import "Audio.h"
 
 @interface SettingScreenViewController ()
 
@@ -38,6 +39,7 @@
     UIImageView *backgroundImageView=[[UIImageView alloc]initWithFrame:self.view.frame];
     [self.view insertSubview:backgroundImageView atIndex:0];
     backgroundImageView.image=backgroundImage;
+    optionSingle = [Global_variable singleObj];
 	// Do any additional setup after loading the view.
 }
 
@@ -47,4 +49,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)segmentvaluechange:(UISegmentedControl *)sender {
+    switch (sender.selectedSegmentIndex) {
+        case 0:
+            optionSingle.gblInt = 0;
+            [[Audio sharedInstance] playMainBackgroundMusic:@"background2.mp3"];
+            break;
+        case 1:
+            optionSingle.gblInt = -1;
+            [[Audio sharedInstance] pauseMainBackgroundMusic];
+        default:
+            break;
+    }
+    
+    
+    
+    
+}
 @end

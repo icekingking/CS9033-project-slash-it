@@ -36,6 +36,10 @@
     [self.view insertSubview:backgroundImageView atIndex:0];
     backgroundImageView.image=backgroundImage;
     
+    
+    temp = [Global_variable singleObj];
+    temp.gblInt = 0;
+    
     SwitchTimer =[NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(SwitchViews:)userInfo:nil repeats:NO];
 	// Do any additional setup after loading the view.
 }

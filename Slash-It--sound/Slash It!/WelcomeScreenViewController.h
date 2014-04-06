@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Global_variable.h"
 
 @interface WelcomeScreenViewController : UIViewController
 {
     NSTimer *SwitchTimer;
+    Global_variable * temp;
 }
 
 @property (nonatomic, retain) NSTimer *SwitchTimer;

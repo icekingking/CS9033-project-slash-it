@@ -14,6 +14,7 @@
 #import "GameCenterScreenViewController.h"
 #import "GameScene.h"
 #import "Audio.h"
+#import "Global_variable.h"
 
 @implementation ViewController{
     GameScene *scene;
@@ -41,7 +42,12 @@ int status = 0;
     [scene draw];
     // Present the scene.
     [skView presentScene:scene];
-    [[Audio sharedInstance] playBackgroundMusic:@"background.mp3"];
+    [[Audio sharedInstance] pauseMainBackgroundMusic];
+    optionSingle = [Global_variable singleObj];
+    if (optionSingle.gblInt == 0) {
+        [[Audio sharedInstance] playBackgroundMusic:@"background.mp3"];
+    }
+    
 
 }
 
@@ -64,7 +70,10 @@ int status = 0;
         self.settingbutton.hidden = YES;
         self.gamecenterbutton.hidden = YES;
         self.pausebutton.hidden = NO;
-        [[Audio sharedInstance] playBackgroundMusic:@"background.mp3"];
+        if (optionSingle.gblInt == 0) {
+            [[Audio sharedInstance] playBackgroundMusic:@"background.mp3"];
+        }
+        
         
         
     }
@@ -78,6 +87,9 @@ int status = 0;
     environmentScreenViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"EnvironmentScreenViewController"];
     
     [self presentViewController:environmentScreenViewController animated:YES completion:Nil];
+    if (optionSingle.gblInt == 0) {
+        [[Audio sharedInstance] playMainBackgroundMusic:@"background2.mp3"];
+    }
 }
 
 - (IBAction)homebutton:(id)sender {
@@ -87,17 +99,22 @@ int status = 0;
     homeScreenViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeScreenViewController"];
     
     [self presentViewController:homeScreenViewController animated:YES completion:Nil];
+    if (optionSingle.gblInt == 0) {
+        [[Audio sharedInstance] playMainBackgroundMusic:@"background2.mp3"];
+    }
 }
 
 
 - (IBAction)settingbutton:(id)sender {
-    /*
+    
     status = 0;
     SettingScreenViewController *settingScreenViewController = [[SettingScreenViewController alloc] init];
     settingScreenViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingScreenViewController"];
     
     [self presentViewController:settingScreenViewController animated:YES completion:Nil];
-     */
+    if (optionSingle.gblInt == 0) {
+        [[Audio sharedInstance] playMainBackgroundMusic:@"background2.mp3"];
+    }
 }
 
 - (IBAction)gamecenterbutton:(id)sender {
@@ -107,6 +124,7 @@ int status = 0;
     gameCenterScreenViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GameCenterScreenViewController"];
     
     [self presentViewController:gameCenterScreenViewController animated:YES completion:Nil];
+    [[Audio sharedInstance] playMainBackgroundMusic:@"background2.mp3"];
      */
 }
 

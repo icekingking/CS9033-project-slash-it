@@ -10,6 +10,7 @@
 #import "Math.h"
 #import "ViewController.h"
 #import "Audio.h"
+#import "Global_variable.h"
 
 
 static const uint8_t boundry   =  0x1 << 1;
@@ -61,6 +62,7 @@ static const double infinity = 9999999999;
         self.levelName = NULL;
         self.activeTouch = 1;
         self.intersectionCount =0;
+        temp = [Global_variable singleObj];
         
         cutmusic = [SKAction playSoundFileNamed:@"cut.mp3" waitForCompletion:NO];
         
@@ -170,7 +172,10 @@ static const double infinity = 9999999999;
     lineCutSecondPoint = ob.position;
     self.activeTouch = 1;
     
-    [self runAction:cutmusic];
+    if (temp.gblInt == 0) {
+        [self runAction:cutmusic];
+    }
+    
     
 }
 

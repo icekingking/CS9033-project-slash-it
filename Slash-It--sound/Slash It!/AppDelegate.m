@@ -7,11 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "Audio.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [[Audio sharedInstance] playMainBackgroundMusic:@"background2.mp3"];
     // Override point for customization after application launch.
     return YES;
 }

@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Global_variable.h"
 
-@interface SettingScreenViewController : UIViewController
+@interface SettingScreenViewController : UIViewController {
+    Global_variable * optionSingle;
+}
+
+//@property NSInteger switchcheck;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentcontrol;
+- (IBAction)segmentvaluechange:(id)sender;
 
 @end

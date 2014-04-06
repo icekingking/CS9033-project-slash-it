@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
+#import "Global_variable.h"
 
-@interface ViewController : UIViewController <UIGestureRecognizerDelegate>
+@interface ViewController : UIViewController <UIGestureRecognizerDelegate>{
+    Global_variable * optionSingle;
+}
 @property (weak, nonatomic) IBOutlet UIButton *resumebutton;
 @property (weak, nonatomic) IBOutlet UIButton *environmentbutton;
 @property (weak, nonatomic) IBOutlet UIButton *homebutton;
